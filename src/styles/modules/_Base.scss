@@ -1,0 +1,145 @@
+// Base
+// ---------------------------------------------------------------------------------------------------------------------
+
+html {
+  font-size: .875rem;
+}
+
+body {
+  margin-top: 56px;
+  //font-family: 'Roboto Condensed', sans-serif !important;
+  //font-family: $font-family-sans-serif;
+  font-family: $font-family-monospace;
+  //font-size: 14px;
+}
+
+#ids {
+  width: 250px;
+}
+
+.Page__wrapper {
+  position: relative;
+  //top: -6px;
+}
+
+h1, h2, h3, h4, h5, h6,
+//.panel__heading,
+.Sidebar__wrapper {
+  font-family: $font-family-condensed;
+}
+
+h1,
+h2 {
+  border-bottom: 1px solid $gray-400;
+}
+
+.total-lots,
+.total-megalots {
+  color: $primary;
+}
+
+.Sidebar__wrapper * {
+  font-size: 1.25rem;
+  input, .input-group-append .input-group-text {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 1rem;
+  }
+}
+
+.flag {
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+
+.fr_FR {
+  background-image: url(#{$img-path}fr_FR.png);
+}
+
+.es_ES {
+  background-image: url(#{$img-path}es_ES.png);
+}
+
+.it_IT {
+  background-image: url(#{$img-path}it_IT.png);
+}
+
+.en_GB {
+  background-image: url(#{$img-path}en_GB.png);
+}
+
+.de_DE {
+  background-image: url(#{$img-path}de_DE.png);
+}
+
+.flag-print {
+  display: none !important;
+}
+
+.col-select {
+  width: 40px;
+  max-width: 40px;
+}
+
+td label, th label {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.table-sm th, .table-sm td {
+  padding: 0.2rem;
+}
+
+.badge {
+  font-weight: 100;
+}
+
+.badge.bg-warning,
+.badge.bg-danger {
+  text-shadow: 0 1px 0 $gray-900;
+  //line-height: 1.2;
+}
+
+.badge.bg-warning {
+  color: $gray-100;
+  background-color: darken($warning, 10%) !important;
+}
+
+.card .table.table-hover tbody tr{
+  &:hover {
+    background-color: $gray-600;
+    a {
+      color: lighten($primary, 20%);
+    }
+  }
+
+}
+
+.btn-outline-secondary {
+  color: $gray-500;
+  border-color: $gray-500;
+}
+
+.print-only {
+  display: none;
+}
+
+.jauge,
+.jauge-detail-icon {
+  animation: fadeIn .5s ease-out;
+}
+
+.rc-tooltip {
+  max-width: 300px;
+}
+
+.bg-synthese {
+  background-color: $gray-700;
+  color: $light;
+}

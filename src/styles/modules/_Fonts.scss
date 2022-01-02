@@ -1,0 +1,95 @@
+//@import "../cmon-customizer/Variables";
+
+$font-family-monospace: 'Roboto Mono', monospace !important;
+$font-family-condensed: 'Roboto Condensed', sans-serif !important;
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin font-face($font-family, $file, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$fonts-path}/#{$file}.woff2') format('woff2'),
+    url('#{$fonts-path}/#{$file}.woff') format('woff');
+    font-weight: $font-style;
+    font-style: $font-style;
+  }
+}
+
+@mixin font-faceTTF($font-family, $file, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$fonts-path}/#{$file}.ttf') format('truetype');
+    font-weight: $font-style;
+    font-style: $font-style;
+  }
+}
+
+@include font-face("Annie Use Your Telescope", 'AnnieUseYourTelescope');
+@include font-face("Butterfly Kids", 'ButterflyKids');
+@include font-face("Capriola", 'Capriola-Regular');
+@include font-face("chewyregular", 'chewy-webfont');
+@include font-face("Courgette", 'Courgette-Regular');
+@include font-face("Crafty Girls", 'crafty_girls');
+@include font-face("cutive_monoregular", 'cutivemono-regular-webfont');
+@include font-face("fabfeltscriptbold", 'fabfeltscript-bold-webfont');
+@include font-face("georgia_bellemedium", 'GeorgiaBelle');
+@include font-face("georgia_belleskinny", 'GeorgiaBelleSkinny');
+@include font-face("jbcursivestd", 'JBCursiveStd-Normal');
+@include font-face("jotione", 'JotiOne-Regular');
+@include font-face("komika_titleregular", 'komtit__-webfont');
+@include font-face("mountainsofchristmas", 'MountainsofChristmas-Regular');
+@include font-face("nickainleynormal", 'nickainley-normal-webfont');
+@include font-face("patrick_hand_scregular", 'patrickhandsc-regular-webfont');
+@include font-face("Rochester", 'rochester');
+@include font-face("krispy-panda", 'Krispy Panda', normal);
+@include font-face("made-bruno", 'MADE Bruno', normal);
+@include font-face("majestic-romance", 'MajesticRomance-ScriptRegular', normal);
+@include font-faceTTF("Farsan_regular", "Farsan-Regular");
+@include font-faceTTF("Kiona_regular", "Kiona-Regular");
+@include font-faceTTF("Lobster_regular", "Lobster-Regular");
+@include font-faceTTF("Poppins_medium", "Poppins-Medium");
+@include font-faceTTF("Dancing_script", "DancingScript-VariableFont_wght");
+@include font-faceTTF("MarkoOne_regular", "MarkoOne-Regular");
+@include font-faceTTF("Sriracha_regular", "Sriracha-Regular");
+@include font-faceTTF("SpaceMono_Italic", "SpaceMono-Italic");
+@include font-faceTTF("Bungee_Regular", "Bungee-Regular");
+@include font-faceTTF("CarterOne_Regular", "CarterOne-Regular");
+@include font-faceTTF("CaveatBrush_Regular", "CaveatBrush-Regular");
+@include font-faceTTF("CodaCaption_ExtraBold", "CodaCaption-ExtraBold");
+@include font-faceTTF("Pacifico_Regular", "Pacifico-Regular");
+@include font-faceTTF("RacingSansOne_Regular", "RacingSansOne-Regular");
+@include font-faceTTF("YesevaOne_Regular", "YesevaOne-Regular");
+@include font-faceTTF("Shrikhand_Regular", "Shrikhand-Regular");
+@include font-faceTTF("Poppins_Bold", "Poppins-Bold");
+@include font-faceTTF("FredokaOne_Regular", "FredokaOne-Regular");
+@include font-faceTTF("Litoland_Regular", "Litoland-Regular");
+@include font-faceTTF("PoetsenOne_Regular", "PoetsenOne-Regular");
+@include font-faceTTF("Roboto_Bold", "Roboto-Bold");
+@include font-faceTTF("Sarina_Regular", "Sarina-Regular");
+@include font-faceTTF("Ribeye_Regular", "Ribeye-Regular");
+@include font-faceTTF("LeckerliOne_Regular", "LeckerliOne-Regular");
+@include font-faceTTF("BerkshireSwash_Regular", "BerkshireSwash-Regular");
+@include font-faceTTF("Lumie", "Lumie");
+@include font-faceTTF("Goodlife_Brush", "Goodlife-Brush");
+
+@font-face {
+  font-family: Quicksand;
+  src: url('#{$fonts-path}/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-Light', 300);
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-Bold', bold);
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-BoldItalic', bold, italic);
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-Regular', normal, normal);
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-LightItalic', 300, italic);
+@include font-face("Roboto Condensed", 'subset-RobotoCondensed-Italic', normal, italic);
+
+@include font-face("Roboto Mono", 'subset-RobotoMono-Italic', normal, italic);
+@include font-face("Roboto Mono", 'subset-RobotoMono-Bold', bold, normal);
+@include font-face("Roboto Mono", 'subset-RobotoMono-Regular', normal, normal);
+@include font-face("Roboto Mono", 'subset-RobotoMono-BoldItalic', bold, italic);
+
+@include font-face("Muli", 'Muli-Regular', 400);
+@include font-face("Muli", 'Muli-ExtraBold', 800);
+@include font-face("Muli", 'Muli-SemiBold', 600);

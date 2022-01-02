@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+      <g id="ETQMariageEgliseV2C_svg__clair">
+        <path
+          fill="#fff"
+          className="ETQMariageEgliseV2C_svg__st0"
+          d="M45 17.4L29.2 30v18L13.9 63.3v36.6h60.4V63.8L60.1 49.6V30z"
+        />
+        <path
+          fill="#1b5056"
+          className="ETQMariageEgliseV2C_svg__st1"
+          d="M40.2 37.5c-1.5 1-2.4 2.6-2.7 4.4-.3 1.8.1 3.7 1.2 5.2.5.7 1.2 1.3 1.9 1.8 1.1.8 2.3 1.5 3.6 1.4.9 0 1.8-.4 2.7-.8 1.1-.6 2.1-1.3 2.9-2.3 1.9-2.5 1.4-6.4-.8-8.6-2.3-2.1-6-2.5-8.8-1.1m12 62.5V78.1c0-4.5-3.7-8.1-8.1-8.1S36 73.6 36 78.1V100h16.2z"
+        />
+        <path
+          fill="#fff"
+          className="ETQMariageEgliseV2C_svg__st0"
+          d="M74.3 77.6l11.8 6.6V100H74.3z"
+        />
+        <path
+          fill="#1b5056"
+          className="ETQMariageEgliseV2C_svg__st1"
+          d="M78.4 99.9v-11c0-2.2-1.8-4.1-4.1-4.1-2.2 0-4.1 1.8-4.1 4.1v11h8.2zM23 58c1.5 1.1 3 2.2 4.7 2.9 1.7.7 3.5 1 5.4 1.2 3.7.5 7.3 1 11 1.4 1.8.1 3.7.2 5.5 0 1.8-.2 3.6-.6 5.5-.9 1.8-.3 3.7-.6 5.4-1 1.8-.4 3.6-1 4.9-2.3-1.2 1.4-3.1 2.2-4.9 2.6-1.8.5-3.6.8-5.4 1.2-1.8.3-3.6.7-5.5.9-1.9.2-3.7.1-5.6-.1-3.7-.4-7.3-1-11-1.5-1.8-.3-3.7-.5-5.4-1.3-1.7-.8-3.2-1.9-4.6-3.1z"
+        />
+        <path
+          d="M29.2 30h30.9L46.6 18.7V8.3H52V5.2h-5.4V0h-3.1v5.2h-5.4v3.1h5.4v10.3z"
+          fill="#fdce85"
+        />
+      </g>
+    </svg>

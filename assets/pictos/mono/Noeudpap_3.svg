@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+     <path d="M8.16 5.28h.06L16 26.7 6.54 14.31v-.07l2.12-1.46v-.06L3.45 8zM23.84 5.28h-.06L16 26.7l9.43-12.4v-.07l-2.12-1.46v-.06L28.55 8z" />
+    <ellipse cx="15.91" cy="12.72" rx="0.94" ry="0.96" />
+    <ellipse cx="15.91" cy="16.4" rx="0.94" ry="0.96" />
+    <ellipse cx="15.91" cy="20.08" rx="0.94" ry="0.96" />
+    <path d="M15.29 7.53h1.5v1.74h-1.5z" />
+    <path d="M15.64 8.42a1 1 0 0 0-.54-.82L11.73 6c-.3-.15-.54 0-.54.34v3.88a.38.38 0 0 0 .56.38l3.33-1.4a.94.94 0 0 0 .56-.78zM16.33 8.42a1 1 0 0 1 .55-.82L20.27 6a.36.36 0 0 1 .55.35v3.88a.39.39 0 0 1-.57.38L16.9 9.2a1 1 0 0 1-.57-.78z" />
+  </svg>

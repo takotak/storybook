@@ -1,0 +1,151 @@
+//$gray-base:              #000;
+//$gray-darker:            lighten($gray-base, 13.5%); // #222
+//$gray-dark:              lighten($gray-base, 20%);   // #333
+//$gray:                   lighten($gray-base, 33.5%); // #555
+//$gray-light:             lighten($gray-base, 46.7%); // #777
+//$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+//
+//$brand-primary:         darken(#428bca, 6.5%); // #337ab7
+//$brand-success:         #5cb85c;
+//$brand-info:            #5bc0de;
+//$brand-warning:         #f0ad4e;
+//$brand-danger:          #d9534f;
+
+
+// Couleurs
+// ---------------------------------------------------------------------------------------------------------------------
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+), $grays);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan: #346caf !default;
+
+$colors: () !default;
+$colors: map-merge((
+        "blue":       $blue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+), $theme-colors);
+
+
+// STATUS
+// ---------
+
+$color-lot-opened: darken($primary, 15%);//#228731;
+$color-lot-full: #f6c016;
+$color-lot-ready: #b7582c;
+$color-lot-ready-durst: #ec18d1;
+$color-lot-reserve: #a82c0e;
+$color-lot-completed: $success;
+
+$color-lot-ressortie: #cd4198;
+$color-lot-ressortieV2: #b264e7;
+$color-lot-partenariat: #329936;
+$color-lot-local: #ee7323;
+
+$color-megalot: #12ac6b;
+
+$color-cmde-processing: lighten($color-lot-ready, 15%);
+$color-cmde-reserve: $color-lot-reserve;
+$color-cmde-generated: $primary;
+$color-cmde-imprimee: #ffe925;
+$color-cmde-fabriquee: #ffacde;
+$color-cmde-complete: $color-lot-completed;
+
+$color-prioritaire: #ef5a63;
+
+$color-step: #ad9cff;
+
+/*
+ * Statuts des impressions
+ */
+
+$color-suivi-imprime: #ffe925;
+$color-suivi-bordeaux: linear-gradient(107deg, orange, red, blueviolet, dodgerblue);
+$color-suivi-durst: rgba(0, 0, 0, 0);
+$color-suivi-decoupe: lighten(#ee7323, 5%);
+//$color-status-decoupe-multipage: lighten($color-status-decoupe, 25%);
+$color-suivi-bde-ressortir: $danger;
+$color-suivi-decoupe-multipage: #806e45;
+$color-suivi-bde-imprimees: $primary;
+$color-suivi-complet: $success;
+//$color-dec_tri_en_cours: linear-gradient(69deg, orange, red);
+$color-dec_tri_en_cours: linear-gradient(69deg, pink, blueviolet, dodgerblue);
+
+// MESSAGES
+// ------------
+
+$message-gift: #fa9192;
+$message-note: $color-suivi-imprime;
+$message-prepa: $cyan;
+
+// Content Type
+$contentType-etq: #3673ab;
+$contentType-obj: $warning;
+$contentType-mix: $success;
+
+$coupon-partenariat: #228731;
+$coupon-presse: $color-lot-reserve;

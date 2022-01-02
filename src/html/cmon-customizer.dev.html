@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMON-CUSTOMIZER</title>
+    <link rel="icon" href="/src/html/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/src/html/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/cmon-bootstrap.css">
+    <style>
+        #product_addtocart_form label {
+            display: block;
+            padding: .5rem 0;
+        }
+        #product_addtocart_form textarea,
+        #cartItems {
+            display: block;
+            width: 100%;
+            height: 240px;
+        }
+        .cart {
+            border: 1px solid #ccc;
+            padding: .5rem;
+        }
+        li.product {
+            padding-top: .8rem;
+            border-top: 1px solid #ccc;
+        }
+        .container-fluid {
+            max-width: 1240px;
+        }
+        .mainContainer > div {
+            margin-left: 1rem !important;
+            margin-right: 1rem !important;
+        }
+        @media (min-width: 992px) {
+            .mainContainer > div {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        #options {
+            margin-bottom: .5rem;
+        }
+        #product_addtocart_form button,
+        #dispatchCartUpdated {
+            display: block;
+            background-color: #2e8ab8;
+            color: white;
+            /*text-transform: uppercase;*/
+            margin: .5rem auto;
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+
+        var locale = 'fr_FR';
+        //var locale = 'es_ES';
+        //var locale = 'it_IT';
+        //var locale = 'en_GB';
+        //var locale = 'de_DE';
+/*
+// bug sac lorsque aucun sac sélectionné (pas de preview en index 1)
+                var editableOrder = {
+                        "id": 22,
+                        "code": "PAC_BOX",
+                        "previews": [
+                            {
+                                "fond": 361,
+                                "forme": 10,
+                                "font": 1,
+                                "picto": null,
+                                "textcolor": 138,
+                                "textes": [
+                                    {
+                                        "value": "Nicolas Gans",
+                                        "ratio": 0.93
+                                    }
+                                ],
+                                "pack": {
+                                    "name": "products.PAC_BOX.name",
+                                    "item": "BOX",
+                                    "qty": 1,
+                                    "description": "options.forme.names.BOX",
+                                    "variation": "options.forme.variations.NONE"
+                                }
+                            },
+                {
+                    "fond": 256,
+                    "forme": 21,
+                    "font": null,
+                    "picto": 0,
+                    "textcolor": null,
+                    "textes": [],
+                    "pack": {
+                        "name": "products.PAC_BOX.name",
+                        "item": "SAC",
+                        "qty": 1,
+                        "description": "options.forme.names.SAC",
+                        "variation": "options.forme.variations.NONE"
+                    }
+                }
+
+                        ]
+                    };*/
+
+        /*var editableOrder = {
+            "id": 1,
+            "code": "VAR_ETV",
+            "previews": [
+                {
+                    "fond": 286,
+                    "forme": 1,
+                    "font": 2,
+                    "picto": 301,
+                    "textcolor": 36,
+                    "textes": [
+                        {
+                            "value": "Nicolas Gans",
+                            "ratio": 1
+                        }
+                    ],
+                    "pack": null
+                }
+            ]
+        };*/
+
+    </script>
+</head>
+<body>
+
+<div id="cmon-customizer"></div>
+
+<div class="container-fluid">
+    <!-- AJOUT AU PANIER -->
+    <div class="row">
+        <div class="col">
+            <form id="product_addtocart_form">
+                <label class="label" for="options">
+                    <span>Cmon_preview_option</span>
+                </label>
+                <textarea id="options" class="product-custom-option"
+                          data-validate="{&quot;required&quot;:true,&quot;validate-no-utf8mb4-characters&quot;:true}"
+                          name="options[10]" data-selector="options[10]"
+                          rows="20" cols="25" aria-required="true"></textarea>
+                <button type="submit">Dispatch 'cmon:validateProductOptions'</button>
+            </form>
+        </div>
+    </div>
+    <!-- AFFICHAGE DES PREVIEWS DU PANIER -->
+    <div class="row my-3 py-3 border-top">
+        <div class="col-12 col-md-6">
+            <h3>CartItems</h3>
+            <textarea id="cartItems"></textarea>
+            <button id="dispatchCartUpdated">Dispatch 'cmon:updatePagePreviews'</button>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>mini-cart</h4>
+            <div class="cart" id="mini-cart"></div>
+        </div>
+        <div class="col-12 col-md-6 border">
+            <h3>checkout-cart-index</h3>
+            <div class="page checkout-cart-index">
+                <form id="form-validate">
+                    <div class="preview-placeholder" data-itemid="42"></div>
+                    <div class="preview-placeholder" data-itemid="44"></div>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 border">
+            <h3>page previews</h3>
+            <div class="page">
+                <div class="preview-placeholder" data-itemid="104"></div>
+                <div class="preview-placeholder" data-itemid="105"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="src/html/cmon-customizer.dev.js"></script>
+</body>
+</html>

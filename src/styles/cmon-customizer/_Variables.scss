@@ -1,0 +1,239 @@
+@use "sass:math";
+
+@import '../modules/BootstrapBase';
+
+// GENERAL
+// ----------------------------------------------------------------------------------------------------------------
+
+$app-root: '';
+$fonts-path: '#{$app-root}/assets/fonts';
+$background-color: $gray-300;
+
+// breakpoints
+$resp-xs: 320px;
+$resp-sm: 576px;
+$resp-md: 768px;
+$resp-lg: 992px;
+$resp-xl: 1200px;
+
+// z-indexes
+$z-dropdown-toggle: 1;
+$z-preview-slideshow: 10;
+$z-heading-dashed: -1;
+$z-heading-solid: -2;
+$z-heading-text: 20;
+
+// margin
+$margin-1: .3rem;
+$margin-2: .5rem;
+$margin-3: 1rem;
+$margin-4: 1.7rem;
+$margin-5: 3rem;
+
+// fonts
+$headings-font-family: 'georgia_belleskinny', cursive;
+$headings-font-family--ABT: 'Muli', cursive;
+
+$border-thickness-2: 2px;
+$border-thickness-1: 1px;
+$border-color: $gray-300;
+
+// BTN
+// ----------------------------------------------------------------------------------------------------------------
+
+$btn-border-radius: .33rem;
+$btn-background-color: $gray-300;
+$btn-hover-background-color: $gray-400;
+$btn-hover-color: $gray-300;
+$btn-padding-x: $margin-3;
+$btn-padding-y: $margin-2;
+$btn-selected-border-color: $gray-700;
+$btn-append-width: 2rem;
+$btn-prepend-width: 2rem;
+$btn-color: white;
+$btn-color-selected: #6DB1B0;
+
+
+// INPUT
+// ----------------------------------------------------------------------------------------------------------------
+
+$input-color: $gray-800;
+$input-label-color: #3A4547;
+$input-background-color: white;
+$input-background-color--error: #FBE2DC;
+$input-height: 3.125rem;
+$input-height-md: 3.75rem;
+$input-invalid-color: #EE7880;
+
+// THUMB
+// ----------------------------------------------------------------------------------------------------------------
+
+//
+$thumb-wrapper-height: $input-height;
+$thumb-wrapper-height-md: $input-height-md;
+
+$thumb-image-width: 2.8125rem;
+$thumb-image-height: $thumb-image-width;
+
+$thumb-picto-wrapper-width: $thumb-wrapper-height;
+$thumb-picto-width: 2.8125rem;
+$thumb-picto-height: $thumb-picto-width;
+$thumb-color-swatch-width: 2rem;
+$thumb-color-swatch-height: 2rem;
+
+$thumb-fond-wrapper-width: $thumb-wrapper-height;
+$thumb-fond-wrapper-width-md: $thumb-wrapper-height-md;
+$thumb-fond-width: 1.625rem;
+$thumb-fond-height: $thumb-fond-width;
+$thumb-fond-scene-wrapper-width: 5.575rem;
+$thumb-fond-scene-wrapper-width-md: 6.575rem;
+$thumb-fond-scene-wrapper-height: 2.125rem;
+$thumb-fond-scene-wrapper-height-md: 2.75rem;
+
+$thumb-forme-wrapper-width: 12.5rem;
+$thumb-forme-width: 9.125rem;
+$thumb-forme-height: $thumb-forme-width;
+$thumb-forme-photo-wrapper-width: 12rem;
+$thumb-forme-photo-wrapper-width-md: 14rem;
+$thumb-forme-photo-wrapper-height: 7rem;
+$thumb-forme-photo-wrapper-height-md: 9rem;
+
+$thumb-textcolor-wrapper-width: $thumb-wrapper-height;
+
+$thumb-font-wrapper-width: 10rem;
+$thumb-font-wrapper-width-sm: 15.75rem;
+$thumb-font-wrapper-width-md: 20.75rem;
+$thumb-font-width: 100%;
+$thumb-font-height: 1.5rem;
+$thumb-font-font-size: 1.4rem;
+
+
+
+// TOGGLER
+// ----------------------------------------------------------------------------------------------------------------
+$toggler-height: $input-height;
+$toggler-padding: $margin-2;
+
+// picto
+$toggler-thumb-picto-width: 2.125rem;
+$toggler-thumb-picto-width-md: 2.75rem;
+$toggler-thumb-picto-height: $toggler-thumb-picto-width;
+
+// fond
+$toggler-thumb-fond-width: $toggler-thumb-picto-width;
+$toggler-thumb-fond-height: $toggler-thumb-picto-width;
+$toggler-thumb-fond-width-md: $toggler-thumb-picto-width-md;
+$toggler-thumb-fond-height-md: $toggler-thumb-picto-width-md;
+$toggler-thumb-fond-scene-width: 7.575rem;
+$toggler-thumb-fond-scene-width-md: 9.25rem;
+
+// textcolor
+$toggler-thumb-textcolor-width: $toggler-thumb-picto-width;
+$toggler-thumb-textcolor-height: $toggler-thumb-picto-width;
+
+// forme
+$toggler-thumb-forme-width: 5.575rem;
+$toggler-thumb-forme-height: $toggler-thumb-picto-width;
+$toggler-thumb-forme-width-md: 6.575rem;
+$toggler-thumb-forme-height-md: $toggler-thumb-picto-width-md;
+$toggler-thumb-forme-width-inline: 10.25rem;
+
+// font
+$toggler-thumb-font-width: $thumb-font-width;
+$toggler-thumb-font-height: $toggler-thumb-picto-width;
+
+
+// CONTENT
+// ----------------------------------------------------------------------------------------------------------------
+
+$content-background-color: darken($gray-100, 1%);
+$content-padding: $margin-2;
+$content-item-margin: .5rem;
+$content-item-background-color: white;
+$content-picto-padding: .5rem .9rem;
+$content-fond-padding: .5rem;
+$content-forme-padding: .5rem;
+
+
+// PREVIEW
+// ----------------------------------------------------------------------------------------------------------------
+
+$preview-picto-width: 1.9rem;
+$preview-picto-height: $preview-picto-width;
+
+// GRD
+$preview-grd-width: 35.4375rem;//567px
+$preview-grd-height: 16.8125rem;//269px
+$preview3D-grd-width: 12.5rem;//200px
+$preview3D-grd-height: 20rem;//320px
+$preview-grd-text-width:180px;
+$preview-grd-text-height:40px;
+
+// MUG
+$preview-mug-width: 35.4375rem;//567px
+$preview-mug-height: 16.8125rem;//269px
+$preview3D-mug-width: 12.5rem;//200px
+$preview3D-mug-height: 10rem;//160px
+$preview-mug-text-width:180px;
+$preview-mug-text-height:40px;
+
+// BOX
+$preview-box-width: 30.5rem;//488px
+$preview-box-height: 27.375rem;//438px
+$preview-box-text-width:120px;
+$preview-box-text-height:28px;
+
+// TRO
+$preview-tro-width: 34.375rem;//863 > 550px
+$preview-tro-height: 22rem;//555px > 353px
+$preview-tro-text-width:176px;
+$preview-tro-text-height:32px;
+// trousse SCOLTUBE = pas les même dimensions
+//$preview-tro2-text-width:100px;
+//$preview-tro2-text-height:22px;
+
+// SACV
+$preview-sacv-text-width:100px;
+$preview-sacv-text-height:24px;
+
+// SAC2M
+$preview-sac2m-width: 18rem;//488px
+$preview-sac2m-height: 25rem;//438px
+$preview-sac2m-text-width:100px;
+$preview-sac2m-text-height:24px;
+
+// SAC2S
+$preview-sac2s-width: 18rem;//488px
+$preview-sac2s-height: 25rem;//438px
+$preview-sac2s-text-width:65px;
+$preview-sac2s-text-height:24px;
+
+// SAC2L
+$preview-sac2l-width: 18rem;//488px
+$preview-sac2l-height: 27rem;//438px
+$preview-sac2l-text-width:90px;
+$preview-sac2l-text-height:24px;
+
+// CHA
+$preview-cha-width: 26.0625rem;//417px
+$preview-cha-height: 30.1875rem;//483px
+$preview-cha-text-width:176px;
+$preview-cha-text-height:32px;
+
+// STI2 noel2019 (avent)
+$preview-sti2-width: 48.0625rem*0.5;
+$preview-sti2-height: 72.875rem*0.5;
+
+// STI/STI3 (planches stickers + stickers vitre)
+$preview-sti-width: 57.5625rem;
+$preview-sti-height: 27.125rem;
+
+// CAR (cartes anniversaires recto/verso)
+$preview-car-width: math.div(51.4375rem, 1.6);
+$preview-car-height: math.div(26.625rem, 1.6);
+
+// VAR_STI2 (planches stickers + stickers vitre)
+$preview-var_sti2-width: 25.6875rem;
+$preview-var_sti2-height: 37.1875rem;
+$preview-var_sti2-text-width:140px;
+$preview-var_sti2-text-height:28px;

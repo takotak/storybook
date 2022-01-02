@@ -1,0 +1,230 @@
+@import '../cmon-customizer/Variables';
+
+@mixin btn-shadow($color: $btn-hover-color) {
+    text-shadow: 0 1px 0 $color;
+}
+
+@mixin btn-hover() {
+    transition: all .3s ease-out;
+    &:hover {
+        background-color: $btn-hover-background-color;
+        color: $btn-hover-color;
+    }
+}
+
+@mixin after-hover() {
+    &::after {
+        transition: all .3s ease-out;
+    }
+    &:hover::after {
+        background-color: $btn-hover-background-color;
+        color: $btn-hover-color;
+    }
+}
+
+//@media (min-width: 576px) {
+
+@mixin breakpoint($point) {
+    @media (min-width: $point) { @content ; }
+    //@if $point == $resp-xl {
+    //    @media (min-width: $resp-xl) { @content ; }
+    //}
+    //@else if $point == $resp-lg {
+    //    @media (min-width: $resp-lg) { @content ; }
+    //}
+    //@else if $point == $resp-md {
+    //    @media (min-width: $resp-md) { @content ; }
+    //}
+    //@else if $point == $resp-sm {
+    //    @media (min-width: $resp-sm)  { @content ; }
+    //}
+    //@else if $point == $resp-xs {
+    //    @media (min-width: $resp-xs)  { @content ; }
+    //
+    //}
+}
+
+//$content-item-background-color,
+//$border-thickness-1 solid $border-color,
+
+
+@mixin content-btn(
+    $padding:$btn-padding-y $btn-padding-x,
+    $margin:$content-item-margin,
+    $background-color:$content-item-background-color,
+    $border:$border-thickness-1 solid $border-color,
+    $border-radius:$btn-border-radius,
+    $hover-color:$btn-hover-color
+) {
+    display: inline-block;
+    margin: $margin;
+    padding: $padding;
+    background-color: $background-color;
+    border: $border;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    animation: scaleUp .25s cubic-bezier(0.01, 0.88, 0.49, 2.05);
+    animation-fill-mode: backwards;
+    animation-delay: .1s;
+    &:nth-child(3n+3) {
+        animation-delay: .15s;
+    }
+    &:nth-child(4n+4) {
+        animation-delay: .2s;
+    }
+    &:nth-child(5n+5) {
+        animation-delay: .25s;
+    }
+
+    &:hover {
+        background-color: $hover-color;
+        text-shadow: none;
+    }
+    [class^="Thumb"],
+    [class*=" Thumb"] {
+        transition: all .3s ease-in;
+        animation: fadeIn .25s ease-in;
+        animation-delay: .25s;
+        animation-fill-mode: backwards;
+    }
+}
+
+@mixin preview-ratio($width, $height, $font-size, $text-width, $line-height, $ratio-xs, $ratio-sm, $ratio-md, $ratio-lg, $ratio-xl) {
+    width: $width*$ratio-xs;
+    height: $height*$ratio-xs;
+    min-width: $width*$ratio-xs;
+    min-height: $height*$ratio-xs;
+    p {
+      font-size: $font-size*$ratio-xs;
+      line-height: $line-height*$ratio-xs;
+      min-width: $text-width*$ratio-xs !important;}
+    @include breakpoint($resp-sm) {
+        //$ratio-sm: 1;
+        width: $width*$ratio-sm;
+        height: $height*$ratio-sm;
+        p {font-size: $font-size*$ratio-sm;
+          line-height: $line-height*$ratio-sm;
+          min-width: $text-width*$ratio-sm !important;}
+    }
+    @include breakpoint($resp-md) {
+        //$ratio-md: 1.35;
+        width: $width*$ratio-md;
+        height: $height*$ratio-md;
+        p {font-size: $font-size*$ratio-md;
+          line-height: $line-height*$ratio-md;
+          min-width: $text-width*$ratio-md !important;}
+    }
+    @include breakpoint($resp-lg) {
+        //$ratio-lg: 1.25;
+        width: $width*$ratio-lg;
+        height: $height*$ratio-lg;
+        p {font-size: $font-size*$ratio-lg;
+          line-height: $line-height*$ratio-lg;
+          min-width: $text-width*$ratio-lg !important;}
+    }
+    @include breakpoint($resp-xl) {
+        //$ratio-xl: 1.55;
+        width: $width*$ratio-xl;
+        height: $height*$ratio-xl;
+        p {font-size: $font-size*$ratio-xl;
+          line-height: $line-height*$ratio-xl;
+          min-width: $text-width*$ratio-xl !important;}
+    }
+}
+
+@mixin preview-ratio2($width, $height, $text-width, $line-height) {
+    width: $width;
+    height: $height;
+    min-width: $width;
+    min-height: $height;
+
+    .PreviewTexte {
+        height: $line-height !important;
+        width: $text-width !important;
+        max-width:$text-width !important;
+    }
+}
+
+@mixin template-borders() {
+    .border-primary:last-child {
+        border-bottom: 1px solid $primary !important;
+    }
+    @include breakpoint($resp-lg) {
+        .border-primary, .border-primary:last-child {
+            border: none !important;
+        }
+    }
+}
+
+@mixin component-max-width() {
+    max-width: 330px;
+    //margin: 0 auto;
+    @include breakpoint($resp-sm) {
+        max-width: 64%;
+    }
+    @include breakpoint($resp-md) {
+        max-width: 440px;
+    }
+    @include breakpoint($resp-lg) {
+        max-width: 400px;
+    }
+}
+
+@mixin no-border-objet() {
+    @include breakpoint($resp-md) {
+        .border-primary:nth-child(3) {
+            border-right: none !important;
+        }
+        .border-primary:nth-child(4) {
+            border-left: none !important;
+            border-top: 1px solid $primary;
+        }
+        .border-primary:nth-child(5) {
+            border-bottom: 1px solid $primary;
+        }
+    }
+}
+
+@mixin add-padding-top-for-title() {
+    padding-top: 3rem !important;
+    @include breakpoint($resp-lg) {
+        padding-top: 0 !important;
+    }
+}
+
+@mixin preserve-component-size() {
+    //@media (min-width: $resp-md) {
+    .Toggler,
+    .Dropdown2__Toggler{
+        height: $toggler-height;
+        .ThumbForme {
+            height: $toggler-thumb-picto-height;
+        }
+        .ThumbPicto,
+        .ThumbFond,
+        .ThumbTextcolor {
+            width: $toggler-thumb-picto-width;
+            height: $toggler-thumb-picto-height;
+        }
+        .Toggler__switch,
+        .Dropdown2__Toggler__switch{
+            height: $toggler-height;
+        }
+    }
+
+    .TogglerWrapper {
+        &--ThumbTextcolor,
+        &--ThumbPicto {
+            width: $thumb-fond-wrapper-width + $btn-append-width;
+            min-width: $thumb-fond-wrapper-width + $btn-append-width;
+        }
+
+        &--ThumbFond {
+            width: $thumb-fond-wrapper-width + $btn-append-width;
+            min-width: $thumb-fond-wrapper-width + $btn-append-width;
+        }
+    }
+
+    //}
+}

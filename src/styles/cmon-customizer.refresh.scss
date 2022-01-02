@@ -1,0 +1,46 @@
+@import 'cmon-customizer';
+@import 'cmon-customizer/Variables.refresh';
+@import 'modules/Fonts';
+@import 'modules/Animations';
+
+#cmon-customizer {
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  button:hover {
+    background-color: unset;
+  }
+}
+
+.Visible-mobile {
+  display: block !important
+}
+
+.Visible-desktop {
+  display: none !important
+}
+
+.Visible-mobile__flex {
+  display: flex !important
+}
+
+.Visible-desktop__flex {
+  display: none !important
+}
+
+ 
+@media (min-width: $resp-sm) {
+  .Visible-mobile {
+    display: none !important
+  }
+  .Visible-desktop {
+    display: block !important
+  }
+  .Visible-mobile__flex {
+    display: none !important
+  }
+  
+  .Visible-desktop__flex {
+    display: flex !important
+  }
+  
+}

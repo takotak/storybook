@@ -1,0 +1,8 @@
+// override bootstrap
+$blue: #2e8ab8;
+$font-weight-base: 300;
+$modal-dialog-margin: 1.5rem;
+$font-family-sans-serif: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';

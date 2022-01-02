@@ -1,0 +1,103 @@
+@use "sass:math";
+
+@import 'cmon-customizer/Variables';
+@import 'modules/Fonts';
+@import 'modules/Animations';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+#cmon-root {
+  //margin-bottom: $margin-5 * 4;
+  min-height: 344px;
+  .container-fluid {
+    max-width: $resp-xl + 40px;
+  }
+  .products-navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $gray-100;
+    //max-height: 78px;
+    overflow-y: scroll;
+  }
+}
+
+.img-fluid {
+  @include img-fluid;
+}
+
+
+
+#cmon-customizer {
+  button, .btn {
+    font-family: $font-family-sans-serif;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding-y $btn-padding-x;
+    cursor: pointer;
+    text-shadow: none;
+    transition: all .3s ease-out;
+    &:hover {
+      background-color: $btn-hover-color;
+    }
+  }
+
+  :focus {
+    outline: none !important;  
+    border-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .btn-small {
+    padding: math.div($btn-padding-y, 3) math.div($btn-padding-x, 3);
+    margin: .1rem;
+    //margin-right: 0 !important;
+    //font-size: .875rem;
+    font-size: .725rem;
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border-color: darken($primary, 10%);
+    color: #fff;
+    &:hover {
+      background-color: lighten($primary, 10%);
+      text-shadow: 0 0 6px darken($primary, 40%);
+    }
+  }
+}
+
+.dev {
+  .col, [class*='col-'] {
+    border: 1px solid $border-color;
+  }
+}
+
+[class^="Template"], [class*=" Template"] {
+  animation: fadeIn .45s ease-out;
+  animation-delay: .2s;
+  animation-fill-mode: backwards;
+}
+
+.Product__baseline {
+  font-size: 1.125rem;
+  color: #7fcfde;
+  font-weight: 300;
+}
+
+//[class^="col-"], [class*=" col-"] {
+//  padding-top: $margin-3;
+//  padding-bottom: $margin-3;
+//}

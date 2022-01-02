@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMON-GEN</title>
+    <meta name="description" content="Description.">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="styles/cmon-gen.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        var locale = 'fr_FR';
+
+        function isNodeJSEnabled() {
+
+            if ( typeof cep_node !== 'undefined') {
+                //if require and process is available, it should be mixed context
+                if ( typeof require !== 'undefined' && typeof process !== 'undefined') {
+                    return 'Node.js is enabled with mixed-context mode';
+                } else {
+                    return 'Node.js is enabled';
+                }
+            } else {
+                return 'Node.js is disabled';
+            }
+        }
+
+        console.log(isNodeJSEnabled());
+
+    </script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="js/libs/CSInterface.js"></script>
+<script id="app" src="js/cmon-gen.js"></script>
+
+</body>
+</html>

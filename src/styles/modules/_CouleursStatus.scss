@@ -1,0 +1,334 @@
+// COULEURS DES STATUTS
+// =======================
+
+
+.gen_open {
+  color: $color-lot-opened !important;
+}
+
+.gen_full {
+  color: $color-lot-full !important;
+}
+
+.gen_ready {
+  color: $color-lot-ready !important;
+}
+
+.gen_ready_durst {
+  color: $color-lot-ready-durst !important;
+}
+
+.gen_reserve {
+  color: $color-lot-reserve !important;
+}
+
+.gen_complet {
+  color: $color-lot-completed !important;
+}
+
+.ressortie {
+  color: $color-lot-ressortie !important;
+}
+
+.ressortieV2 {
+  color: $color-lot-ressortieV2 !important;
+}
+
+.partenariat {
+  color: $color-lot-partenariat !important;
+}
+
+.lot-standard::before {
+  content: "";
+}
+
+.megalot-ressortie,
+.lot-ressortie {
+  color: $color-lot-ressortie !important;
+  &::before {
+    content: "R";
+  }
+}
+
+.megalot-ressortieV2,
+.lot-ressortieV2 {
+  color: $color-lot-ressortieV2 !important;
+  //text-shadow: 0 1px 1px lighten($color-lot-ressortieV2, 25%);
+  &::before {
+    content: "R";
+  }
+}
+
+.lot-partenariat {
+  color: $color-lot-partenariat !important;
+  &::before {
+    content: "P";
+  }
+}
+
+.megalot-local,
+.lot-local {
+  color: $color-lot-local !important;
+  &::before {
+    content: "L";
+  }
+}
+
+.megalot-prioritaire,
+.lot-prioritaire,
+.commande-prioritaire {
+  color: $color-prioritaire !important;
+  //text-shadow: 0 1px 1px white;
+}
+
+.megalot-prioritaire,
+.lot-prioritaire {
+  &::before {
+    content: "PR";
+  }
+}
+
+
+.mg_gen_open {
+  color: $color-lot-opened !important;
+}
+
+.mg_gen_full {
+  color: $color-lot-full !important;
+}
+
+.mg_gen_ready {
+  color: $color-lot-ready !important;
+}
+
+.mg_gen_complet {
+  color: $color-lot-completed !important;
+}
+
+.bg-mg_dec_aucun,
+.bg-0 {
+  background: none;
+  border: 1px solid $gray-800;
+  color: $gray-600;
+}
+
+.bg-1 {
+  background-color: $gray-600 !important;
+}
+
+.bg-mg_dec_rip {
+  background-color: $color-lot-ready-durst !important;
+  color: $gray-700;
+  .MegalotName {
+    color: white;
+  }
+}
+
+.bg-mg_dec_imprime,
+.bg-2 {
+  background-color: $color-suivi-imprime !important;
+  color: $gray-700;
+}
+
+.bg-mg_dec_decoupe,
+.bg-3 {
+  background-color: $color-suivi-decoupe !important;
+  color: $gray-700;
+  .MegalotName {
+    color: white;
+  }
+}
+
+.bg-mg_dec_complet {
+  background-color: $color-suivi-complet !important;
+  color: $gray-700;
+  a {
+    color: white;
+  }
+}
+
+//.non-preparator {
+//  color: $gray-600 !important;
+//}
+
+
+.bg-dec_aucun {
+  background-color: $color-lot-ressortie;
+}
+
+.bg-dec_attente {
+  background: none;
+  border: 1px solid $gray-400;
+}
+
+.bg-dec_imprime,
+.bg-dec_impression {
+  background-color: $color-suivi-imprime;
+}
+
+.bg-dec_decoupe,
+.bg-dec_decoupe_en_cours {
+  background-color: $color-suivi-decoupe;
+}
+
+.bg-dec_decoupe_multipage {
+  background-color: $color-suivi-decoupe-multipage;
+}
+
+.bg-dec_bde_ressortir {
+  background-color: $color-suivi-bde-ressortir;
+}
+
+.bg-dec_bde_imprimees {
+  background-color: $color-suivi-bde-imprimees;
+}
+
+.bg-dec_complet {
+  background-color: $color-suivi-complet !important;
+}
+
+.bg-dec_tri_en_cours {
+  background-image: $color-dec_tri_en_cours !important;
+}
+
+//.bg-dec_tri_complet {
+//  background-image: $color-dec_tri_complet !important;
+//}
+
+.page-suivi .bg-dec_aucun {
+  background-color: $color-suivi-complet !important;
+  a {
+    color: white;
+  }
+}
+
+.bg-dec_bordeaux,
+.bg-dec_cq_decoupe {
+  background-image: $color-suivi-bordeaux;
+}
+
+.bg-dec_durst {
+  //background-image: radial-gradient(rgba(0, 0, 0, 0), $color-megalot);
+  box-shadow: 0 0 6px 3px inset rgba($color-megalot, .3);
+}
+
+.bg-dbl_aucun,
+.bg-0 {
+  background: none;
+  border: 1px solid $gray-400;
+}
+
+.bg-dbl_decoupe {
+  background-color: $color-suivi-decoupe;
+}
+
+.bg-dbl_complet {
+  background-color: $color-suivi-complet !important;
+}
+
+
+.bg-exp_aucun {
+  background-color: $color-cmde-reserve !important;
+}
+
+.bg-exp_pris,
+.bg-exp_en_cours {
+  background-color: $color-suivi-decoupe !important;
+}
+
+.bg-exp_complet {
+  background-color: $success !important;
+}
+
+.bg-complet,
+.bg-exp_aucun,
+.bg-exp_pris,
+.bg-exp_en_cours,
+.bg-exp_complet {
+  a {
+    color: $light;
+  }
+}
+
+.bg-step0 {
+  background-color: $red;
+}
+
+.bg-step1 {
+  background-color: $color-suivi-imprime;
+  color: $gray-700;
+}
+
+.bg-step2 {
+  background-color: $color-suivi-decoupe;
+}
+
+.bg-step3 {
+  background-color: blueviolet;
+}
+
+.bg-step4 {
+  background-color: $cyan;
+}
+
+.bg-step5 {
+  background-color: $success;
+}
+
+.lot-durst {
+  color: $color-megalot;
+}
+
+.bg-STEP_AUCUN {
+  background-color: darken($color-cmde-fabriquee, 65%);
+}
+
+.bg-STEP_A_REALISER {
+  background-color: transparent;
+  border: 1px solid $gray-400;
+}
+
+.bg-STEP_FABRIQUE {
+  background-color: $color-cmde-fabriquee;
+}
+
+.bg-STEP_EN_SOUFFRANCE {
+  background-color: $danger;
+}
+
+.col-pole {
+  &.FAB_EN_ATTENTE,
+  &.FAB_A_FAIRE,
+  &.FAB_EN_COURS {
+    background-color: transparent;
+  }
+
+  &.FAB_COMPLETE {
+    background-color: $color-cmde-fabriquee;
+    color: black;
+  }
+
+  &.FAB_EN_SOUFFRANCE {
+    background-color: $danger;
+    border: 2px dashed white !important;
+  }
+
+  &.FAB_PAS_D_OBJET {
+    //background-color: darken($color-lot-ready-durst, 32%);
+    background-color: darken($color-cmde-fabriquee, 65%);
+  }
+}
+
+.totalTime-1 {
+  color: $green !important;
+}
+.totalTime-2 {
+  color: $yellow !important;
+}
+.totalTime-3 {
+  color: $orange !important;
+}
+.totalTime-4 {
+  color: $red !important;
+  //font-weight: bold;
+}

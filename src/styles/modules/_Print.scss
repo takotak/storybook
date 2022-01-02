@@ -1,0 +1,74 @@
+/* Print Style Sheet */
+@media print {
+  body {
+    background:white;
+    color:black;
+    margin: 0;
+  }
+
+  .table {
+    color: $gray-700;
+  }
+
+  .no-print,
+  .ScrollToTop,
+  .CommandeStatusChooser,
+  .CommandeHistorique.list-group,
+  .CommandeShipping__wrapper,
+  .Preview:not(.is-objet),
+  .Sidebar__wrapper,
+  .Notification.timing,
+  .select-order-cb,
+  .LotIndexPanel,
+  .PageParcourirObjets__PagedLots,
+  .PageParcourirObjets > h1,
+  .product-edit,
+  .col-product-edit
+  //.lazyload-placeholder
+  {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .objet-texte {
+    font-size: 1.5rem;
+  }
+
+  .Sidebar--opened .Page__wrapper {
+    margin-left: 0;
+  }
+
+  .CommandeInfosObjets {
+    display: flex !important;
+    &:not(:first-child) {
+      page-break-before: always;
+    }
+  }
+
+  .CommandePanel:not(:first-child) {
+    //page-break-before: always;
+    clear: both;
+    display: block;
+  }
+
+  .card,
+  .card-header,
+  .lazyload-placeholder {
+    background-color: white !important;
+  }
+
+  .flag-print {
+    display: inline-block !important;
+    margin: 0 .5rem;
+  }
+
+  @page {
+    size: auto;   /* auto is the initial value */
+    /* this affects the margin in the printer settings */
+    margin-top: 15mm;
+    margin-bottom: 15mm;
+  }
+}

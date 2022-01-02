@@ -1,0 +1,95 @@
+// Animations
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes toBottom {
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+.toBottom {
+  animation: toBottom 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes toRight {
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.toRight {
+  animation: toRight 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fromBack {
+  0% {
+    transform: scale(.92) rotateX(-50deg) translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotateX(0) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: .2;
+  }
+}

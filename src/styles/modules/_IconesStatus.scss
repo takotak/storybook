@@ -1,0 +1,207 @@
+// IconesStatus
+// ---------------------------------------------------------------------------------------------------------------------
+
+.icon-order-status {
+  &.processing {
+    background-color: $color-cmde-processing;
+  }
+  &.reserve {
+    background-color: $color-cmde-reserve;
+  }
+  &.generated {
+    background-color: $color-cmde-generated;
+  }
+  &.imprimee {
+    background-color: $color-cmde-imprimee;
+  }
+  &.fabriquee {
+    background-color: $color-cmde-fabriquee;
+  }
+  &.complete {
+    background-color: $color-cmde-complete;
+  }
+  &.pending,
+  &.pending_payment,
+  &.hipay_authorization_requested,
+  &.holded,
+  &.canceled,
+  &.paypal_canceled_reversal {
+    background-color: $gray-500;
+  }
+  &.closed,
+  &.hipay_refund_requested,
+  &.paypal_reversed,
+  &.payment_review {
+    background-color: $gray-700;
+  }
+  &.generated,
+  &.imprimee,
+  &.fabriquee,
+  &.complete {
+    &::before {
+      content: "\f03a";
+    }
+  }
+  &.pending,
+  &.pending_payment,
+  &.hipay_authorization_requested,
+  &.processing,
+  &.reserve,
+  &.payment_review {
+    &::before {
+      content: "\f0bb";
+    }
+  }
+  &.ressortie {
+    background-color: $color-lot-ressortie;
+    &::before {
+      color: white;
+      transform: scale(-.8, .8);
+      content: "\e900";
+    }
+  }
+  &.ressortieV2 {
+    background-color: $color-lot-ressortieV2;
+    &::before {
+      color: white;
+      transform: scale(-.8, .8);
+      content: "\e900";
+    }
+  }
+  &.closed,
+  &.holded,
+  &.paypal_canceled_reversal,
+  &.canceled,
+  &.paypal_reversed {
+    &::before {
+      transform: translate(0,1px);
+      content: "\f081";
+    }
+  }
+  &.hipay_refund_requested {
+    &::before {
+      transform: translate(0,1px);
+      content: "€";
+    }
+  }
+  &.ressortie.small,
+  &.ressortieV2.small {
+    &::before {
+      transform: translate(1px, -1px) scale(-.9, .9);
+    }
+  }
+}
+
+.icon-objet::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 2px black;
+  border: 1px solid darken($warning, 30%);
+  border-radius: 50%;
+  background-color: $warning;
+}
+
+.icon-lot-status {
+  &.gen_reserve {
+    background-color: $color-lot-reserve;
+    &::before {
+      content: "\f0bb";
+    }
+  }
+}
+
+.icon-fab-status {
+  &::before {
+    content: "\f0bb";
+  }
+  &.FAB_EN_ATTENTE {
+    background-color: $secondary;
+  }
+  &.FAB_A_FAIRE {
+    background-color: lighten($color-cmde-generated, 10%);
+    &::before {
+      content: "\f078";
+    }
+  }
+  &.FAB_EN_COURS {
+    background-color: $color-cmde-reserve;
+    &::before {
+      content: "\f0d2";
+      color: $color-cmde-imprimee !important;
+    }
+  }
+  &.FAB_COMPLETE {
+    background-color: $color-cmde-fabriquee;
+    border: 1px solid $color-cmde-reserve;
+    &::before {
+      content: "\f03a";
+      color: $color-cmde-reserve !important;
+    }
+  }
+  &.FAB_EN_SOUFFRANCE {
+    background-color: $danger;
+    border: 1px solid white;
+    &::before {
+      content: "\f02d";
+    }
+  }
+}
+
+.icon-order-status,
+.icon-lot-status,
+.icon-fab-status {
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 24px;
+  text-align: center;
+  color: #FFF !important;
+  margin: 0 2px;
+  &::before {
+    display: inline-block;
+    color: #FFF !important;
+  }
+
+  &.small {
+    transform: scale(.65);
+    &::before {
+      transform: translate(2px, 0);
+    }
+  }
+
+  &.active {
+    opacity: 1 !important;
+  }
+
+  &.inactive {
+    opacity: .35;
+    transform: scale(.8);
+    border: none;
+  }
+}
+
+.icon-fab-status {
+  border-radius: 3px;
+}
+
+a.icon-order-status,
+a.icon-lot-status,
+a.icon-fab-status {
+  &:hover {
+    opacity: 1;
+    color: #FFF;
+    transition: all .2s;
+    transform: scale(1);
+  }
+}
+
+.table [class^="icon-"], .table [class*=" icon-"] {
+  padding-right: 4px;
+  font-size: 16px;
+  color: $primary;
+}
